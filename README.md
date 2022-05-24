@@ -41,4 +41,5 @@ These parameters can be modified both in edit mode and in runtime mode.
 - The AZIMUTH package, which I created in 2017, was used for camera management.
 - 3D objects were created with Cinema4D software and also imported from DAZ Studio.
 - The textures were created and/or formatted with Photoshop.
+- The tank can hold up to approximately 3200 Marbles.
 ***
