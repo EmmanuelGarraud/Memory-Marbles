@@ -1,0 +1,120 @@
+****************************************************************************************************************
+***** @ Emmanuel Garraud CopyLeft 2017 *************************************************************************
+***** AZIMUTH package ******************************************************************************************
+****************************************************************************************************************
+DESCRIPTION :
+
+Camera Orbit Control : 
+
+(EN) rotate, zoom and pan camera around an object with smooth effect.
+
+(FR) rotation, zoom et panoramique de camera autour d'un objet avec effet 'smooth'.
+
+Objet Orbit Control : 
+
+(EN) object rotation with optical or mechanical zoom and camera panning.
+
+(FR) rotation de l'objet avec zoom optique ou mécanique et panoramique de camera.
+
+****************************************************************************************************************
+FONCTIONNEMENT / WORKING :
+
+(ENGLISH VERSION) **********************************************************************************************
+
+CAMERA ORBIT CONTROL: Camera that rotates around the object
+
+- Place the CameraManager and CamOrbitControl prefabs on the scene in x=0 y=o z=0 (or other position).
+
+OBJET ORBIT CONTROL: Object that rotates in front of the camera
+
+- Place the CameraManager, Conteneur3D and ObCamera prefabs on the scene.
+
+(FRENCH VERSION) ***********************************************************************************************
+
+CAMERA ORBIT CONTROL : Camera qui tourne autour de l'objet
+
+- Placer les prefabs CameraManager et CamOrbitControl sur la scène en x=0 y=o z=0 (ou autre position).
+
+OBJET ORBIT CONTROL : Objet qui tourne devant la camera
+
+- Placer les prefabs CameraManager, Conteneur3D et ObCamera sur la scène.
+
+****************************************************************************************************************
+SCRIPTS :
+
+(ENGLISH VERSION) **********************************************************************************************
+
+- The InputManager script handles left-click mouse movement, used in both modes.
+
+- The CameraOrbitController script:
+
+	- Smooth effect of adjustable movement
+	- We assign the center (usually the gameobject itself is CamOrbitControl)
+	- We define whether the center shift is active or not via the keyboard keys:
+	Up, down, right, left arrow and PageUp and PageDown keys
+	- We define the speed of this movement
+	- We configure the management of the optical zoom of the camera, we indicate the starting focal length
+	zoom speed, sensitivity, minimum zoom and maximum zoom
+	- It is indicated if the cursor becomes invisible on click and if it remains in the center
+
+- The ObjectOrbitController script:
+
+	- Smooth effect of adjustable movement
+	- We assign the center (in general the gameobject itself is Conteneur3D)
+	- We define whether the center shift is active or not via the keyboard keys:
+	Up, down, right, left arrow and PageUp and PageDown keys
+	- We define the speed of this movement
+	- We configure the management of the camera zoom,
+	we set the distance of the camera from the start (from the center)
+	we indicate the starting focal length, the zoom speed, its sensitivity,
+	it is indicated whether the zoom is optical (change of focal length) or mechanical (the camera moves)
+	If optical zoom, the minimum zoom and the maximum zoom are indicated
+	If mechanical zoom, the minimum and maximum distances from the center are indicated
+	- It is indicated if the cursor becomes invisible on click and if it remains in the center
+
+- The ExclusionManager script:
+
+	- Use this script on interface elements to create exclusion zones.
+	- Predefined to be used with CameraOrbitController.
+	- To be adapted to work with ObjetOrbitController (see in the script)
+
+(FRENCH VERSION) **********************************************************************************************
+
+- Le script InputManager gère le mouvement de la souris au clic gauche, utilisé dans les deux modes.
+
+- Le script CameraOrbitController :
+
+	- Effet smooth du déplacement réglable
+	- On assigne le centre (en général le gameobject lui-même soit CamOrbitControl)
+	- On définit si le déplacement du centre est actif ou non via les touches du clavier :
+		flèche Haut, bas, droite, gauche et touches PageUp et PageDown
+	- On définit la vitesse de ce déplacement
+	- On paramètre la gestion du zoom optique de la caméra, on indique la focale de départ
+	  la vitesse du zoom, sa sensibilité, le zoom minimum et le zoom maximum
+	- On indique si le curseur se rend invisible au clic et si celui ci reste au centre
+
+- Le script ObjetOrbitController :
+
+	- Effet smooth du déplacement réglable
+	- On assigne le centre (en général le gameobject lui-même soit Conteneur3D)
+	- On définit si le déplacement du centre est actif ou non via les touches du clavier :
+		flèche Haut, bas, droite, gauche et touches PageUp et PageDown
+	- On définit la vitesse de ce déplacement
+	- On paramètre la gestion du zoom de la caméra, 
+		on paramètre la distance de la caméra au départ (par rapport au centre)
+		on indique la focale de départ, la vitesse du zoom, sa sensibilité,
+		on indique si le zoom est optique (changement de focale) ou mécanique (la caméra se déplace)
+		Si zoom optique on indique le zoom minimum et le zoom maximum
+		Si zoom mécanique on indique les distances minimum et maximum par rapport au centre
+	- On indique si le curseur se rend invisible au clic et si celui ci reste au centre
+
+- Le script ExclusionManager :
+
+	- Utiliser ce script sur des éléments d'interface afin de créer des zones d'exclusion.
+	- Prédéfini pour être utilisé avec CameraOrbitController.
+	- A adapter pour fonctionner avec ObjetOrbitController (voir dans le script)
+
+****************************************************************************************************************
+***** @ Emmanuel Garraud CopyLeft 2017 *************************************************************************
+***** AZIMUTH package ******************************************************************************************
+****************************************************************************************************************
