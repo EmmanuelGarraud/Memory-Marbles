@@ -42,4 +42,6 @@ These parameters can be modified both in edit mode and in runtime mode.
 - 3D objects were created with Cinema4D software and also imported from DAZ Studio.
 - The textures were created and/or formatted with Photoshop.
 - The tank can hold up to approximately 3200 Marbles.
+- Setting up this project and its code and README file took me about 2h30.
+  (If the deadline defined (2h) for its realization had not been limited (and exceeded) I would have continued)
 ***
