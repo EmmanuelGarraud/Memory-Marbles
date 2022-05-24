@@ -37,7 +37,7 @@ These parameters can be modified both in edit mode and in runtime mode.
 - Improve UI interface graphics and ergonomics
 ***
 <a name="more-infos"/></a>
-## More infos
+## More infos :
 - The AZIMUTH package, which I created in 2017, was used for camera management.
 - 3D objects were created with Cinema4D software and also imported from DAZ Studio.
 - The textures were created and/or formatted with Photoshop.
