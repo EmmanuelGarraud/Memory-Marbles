@@ -12,6 +12,7 @@ public class MarbleManager : MonoBehaviour
     [SerializeField] MarbleDatasManager MDM;
     [SerializeField] Button btReinject;
     [SerializeField] TMP_Dropdown dropMarbleList;
+    [SerializeField] TMP_Text nbMarbles;
 
     private Vector3 spawnPosition;
     private int marbleIndex;
@@ -36,6 +37,7 @@ public class MarbleManager : MonoBehaviour
         btReinject.interactable = false;
         dropMarbleList.interactable = false;
         marbleIndex = -1;
+        nbMarbles.text = "0";
     }
     // Creation of a new marble
     public void NewMarble()
@@ -79,6 +81,7 @@ public class MarbleManager : MonoBehaviour
         // Add created gameObject to MarbleDatasManager
         MDM.marbleObject.Add(marble);
         marbleCount++;
+        nbMarbles.text = marbleCount.ToString();
         if (marbleCount == 1) 
         {
             dropMarbleList.interactable = true;
